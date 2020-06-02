@@ -65,5 +65,18 @@ You can now open source tree and clone a branch.
 
 Troubleshooting
   -
+How to permanently add a private key with ssh-add on MacOS?
 
-  
+A solution would be to force the key files to be kept permanently, by adding them in your ~/.ssh/config file:
+
+> IdentityFile ~/.ssh/gitHubKey
+> IdentityFile ~/.ssh/id_rsa
+
+This file ** config ** should be in the ~/.ssh directory.
+you can use this command to modify it:
+
+> nano ~/.ssh/config
+
+https://stackoverflow.com/questions/3466626/how-to-permanently-add-a-private-key-with-ssh-add-on-ubuntu
+
+https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
