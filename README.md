@@ -15,8 +15,7 @@ If you want to see where the system keep the SSH keys (Public and Private)
 - cd ~/.ssh
 - ls
 
-You'll see the SSH keys (Public and Private)
--
+**You'll see the SSH keys (Public and Private)**
 > config\
 > id_rsa.pub\
 > id_rsa\
