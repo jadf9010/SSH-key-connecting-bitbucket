@@ -141,7 +141,17 @@ If you don't have any keys loaded in the agent:
 $ ssh -T hg@bitbucket.org
 Permission denied (publickey).
 ```
-
+If your local machine is unable to get the bitbucket.org IP address:
+````
+$ ssh -T hg@bitbucket.org
+ssh: connect to host bitbucket.org port 22: Connection refused
+````
+If your connection is successful:
+````
+$ ssh -T hg@bitbucket.org
+conq: logged in as teamsinspace.
+You can use git or hg to connect to bitbucket. Shell access is disabled.
+````
 https://stackoverflow.com/questions/3466626/how-to-permanently-add-a-private-key-with-ssh-add-on-ubuntu
 
 https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
