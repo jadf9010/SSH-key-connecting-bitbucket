@@ -15,11 +15,11 @@ If you want to see where the system keep the SSH keys (Public and Private)
 - cd ~/.ssh
 - ls
 
-config/n			
-id_rsa.pub/n		
-id_rsa			
+config
+id_rsa.pub
+id_rsa
 user-Bitbucket.pub
-user-Bitbucket	
+user-Bitbucket
 key_backup
 
 Using SSH keys to allow access to Bitbucket Server repositories
