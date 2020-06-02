@@ -47,7 +47,7 @@ Copy the public key. One approach is to display the key on-screen using cat, and
 
 ```
 1- Open the terminal
-> cat < ~/.ssh/id_rsa.pub  
+2- cat < ~/.ssh/id_rsa.pub  
 3- Now, in Bitbucket Server, go to the Settings tab for the project or repository.
 Click Access keys and then Add key.
 4- Paste the key into the text box and click Add key.
@@ -56,6 +56,7 @@ Click Access keys and then Add key.
 
 Add the private key to that system. For Bitbucket in MacOs:
   -  
+  Open the Terminal:
 > ssh-add -K ~/.ssh/id_rsa
   
 Troubleshooting
