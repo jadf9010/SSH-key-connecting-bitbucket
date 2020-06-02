@@ -15,9 +15,9 @@ If you want to see where the system keep the SSH keys (Public and Private)
 - cd ~/.ssh
 - ls
 
-- config
-- id_rsa.pub
-- id_rsa
+*config
+*id_rsa.pub
+*id_rsa
 - user-Bitbucket.pub
 - user-Bitbucket
 - key_backup
