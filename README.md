@@ -15,9 +15,9 @@ If you want to see where the system keep the SSH keys (Public and Private)
 - cd ~/.ssh
 - ls
 
--config			-id_rsa.pub		-user-Bitbucket.pub
+-config			id_rsa.pub		user-Bitbucket.pub
 
--id_rsa			-user-Bitbucket	-key_backup
+-id_rsa			user-Bitbucket	key_backup
 
 Using SSH keys to allow access to Bitbucket Server repositories
 To get the SSH key to work with your build, or other, system, you need to:
