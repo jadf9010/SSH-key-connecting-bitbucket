@@ -69,6 +69,11 @@ DONE.
 -
 You can now open source tree and clone a branch.
 
+TIPS
+-
+This show all the identities that has the agent.
+> ssh-add -L
+
 Troubleshooting
   -
 **How to permanently add a private key with ssh-add on MacOS?**
