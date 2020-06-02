@@ -46,7 +46,7 @@ You simply copy the public key, from the system for which you want to allow acce
 Copy the public key. One approach is to display the key on-screen using cat, and copy it from there:
 
 1- Open the terminal
-2- > cat < ~/.ssh/id_rsa.pub  
+>2- cat < ~/.ssh/id_rsa.pub  
 3- Now, in Bitbucket Server, go to the Settings tab for the project or repository.
 Click Access keys and then Add key.
 4- Paste the key into the text box and click Add key.
