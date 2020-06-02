@@ -30,8 +30,8 @@ Create the SSH key:
   -  
   An SSH key consists of a pair of files. One is the private key, which should never be shared with anyone. The other is the public key:
   
-1- Ensure you have a SSH key first. Or create one on the command line:
-2- Open the Terminal
+1- Ensure you have a SSH key first. Or create one on the command line:\
+2- Open the Terminal\
 3- > ssh-keygen -t rsa -C "your_email@example.com"
 
 Your private key is saved to the **id_rsa** file in the **.ssh directory** and is used to verify the public key you use belongs to the same Bitbucket Server account.
