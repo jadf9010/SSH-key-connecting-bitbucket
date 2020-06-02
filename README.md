@@ -57,7 +57,12 @@ Now go back to your command line and follow the next steps:
 Add the private key to that system. For Bitbucket in MacOs:
   -  
   Open the Terminal:
+> ssh-add -K ~/.ssh/[your-private-key]  
 > ssh-add -K ~/.ssh/id_rsa
+
+Configure SSH to always use the keychain
+-
+In the section Troubleshooting below It was solved
 
 DONE.
 -
