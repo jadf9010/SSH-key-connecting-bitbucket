@@ -94,11 +94,16 @@ Before you add the private key :
 
 > ssh-add -K ~/.ssh/[your-private-key]
 
-You must run than command:
+You must run this command:
 
 > echo ssh-add -A | cat >> ~/.bash_profile
 
-The **.bash_profile** contains all the startup configuration and preferences for your command line interface.
+Theses command will be added to **.bash_profile** file the command **ssh-add -A**
+**ssh-add -A** : run manually to load your saved keychain.
+
+The **.bash_profile** contains all the startup configuration and preferences for your command line interface. 
+
+https://unix.stackexchange.com/questions/140075/ssh-add-is-not-persistent-between-reboots/335720#335720?newreg=eab245b81e504751a3820ade565a0729
 
 > In ~/.ssh create config file with the following content:
 
