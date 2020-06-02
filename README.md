@@ -90,6 +90,12 @@ ssh-add -K ~/.ssh/your_private_key
 But this way no longer works. Keys added to the keychain via ssh-add -K are not automatically re-added to the ssh-agent after a reboot.
 
 **SOLUTION**
+before you add the private key : 
+> ssh-add -K ~/.ssh/[your-private-key]
+you must run than command:
+> echo ssh-add -A | cat >> ~/.bash_profile
+The **.bash_profile** contains all the startup configuration and preferences for your command line interface.
+
 > In ~/.ssh create config file with the following content:
 
 ```
