@@ -77,6 +77,24 @@ you can use this command to modify it:
 
 > nano ~/.ssh/config
 
+**Other solution could be to solved that problem by using -K option for ssh-add:**
+
+ssh-add -K ~/.ssh/your_private_key
+
+But this way no longer works. Keys added to the keychain via ssh-add -K are not automatically re-added to the ssh-agent after a reboot.
+
+**SOLUTION**
+> In ~/.ssh create config file with the following content:
+
+```
+Host * (asterisk for all hosts or add specific host)
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile <key> (e.g. ~/.ssh/userKey)
+```
+
 https://stackoverflow.com/questions/3466626/how-to-permanently-add-a-private-key-with-ssh-add-on-ubuntu
 
 https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
+
+https://github.com/jirsbek/SSH-keys-in-macOS-Sierra-keychain
