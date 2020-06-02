@@ -7,21 +7,7 @@ https://confluence.atlassian.com/bitbucketserver/ssh-access-keys-for-system-use-
 Before you can use SSH keys to secure a connection with Bitbucket Server the following must have already been done: 
 -
 - Your Bitbucket Server administrator must have already enabled SSH access, on Bitbucket Server.
-- You must have already created an SSL key. See Creating SSH keys. Alternatively, you can use an existing key, if it isn't already being used for a personal account in Bitbucket Server.
-
-If you want to see where the system keep the SSH keys (Public and Private)
--
-- Open the terminal
-- cd ~/.ssh
-- ls
-
-**You'll see the SSH keys (Public and Private)**
-> config\
-> id_rsa.pub\
-> id_rsa\
-> user-Bitbucket.pub\
-> user-Bitbucket\
-> key_backup
+- You must have already created an SSL key.
 
 Using SSH keys to allow access to Bitbucket Server repositories
 To get the SSH key to work with your build, or other, system, you need to:
@@ -37,7 +23,22 @@ Create the SSH key:
 Your private key is saved to the **id_rsa** file in the **.ssh directory** and is used to verify the public key you use belongs to the same Bitbucket Server account.
 
 Your public key is saved to the **id_rsa.pub;** file and is the key you upload to your Bitbucket Server account.
-  
+
+
+If you want to see where the system keep the SSH keys (Public and Private)
+-
+- Open the terminal
+- cd ~/.ssh
+- ls
+
+**You'll see the SSH keys (Public and Private)**
+> config\
+> id_rsa.pub\
+> id_rsa\
+> user-Bitbucket.pub\
+> user-Bitbucket\
+> key_backup
+
 Add the public key to Bitbucket Server account as described here:
   -    
 Add an SSH access key to either a Bitbucket Server project or repository
