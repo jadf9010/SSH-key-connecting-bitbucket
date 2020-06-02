@@ -11,13 +11,12 @@ Before you can use SSH keys to secure a connection with Bitbucket Server the fol
 
 If you want to see where the system keep the SSH keys (Public and Private)
 -
-1- Open the terminal
-2- cd ~/.ssh
-3- ls
+- Open the terminal
+- cd ~/.ssh
+- ls
 config			id_rsa.pub		user-Bitbucket.pub
--
+
 id_rsa			user-Bitbucket	key_backup
--
 
 Using SSH keys to allow access to Bitbucket Server repositories
 To get the SSH key to work with your build, or other, system, you need to:
