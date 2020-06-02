@@ -73,22 +73,6 @@ Troubleshooting
   -
 **How to permanently add a private key with ssh-add on MacOS?**
 
-A solution would be to force the key files to be kept permanently, by adding them in your ~/.ssh/config file:
-
-> IdentityFile ~/.ssh/gitHubKey\
-> IdentityFile ~/.ssh/id_rsa
-
-This file **config** should be in the ~/.ssh directory.
-you can use this command to modify it:
-
-> nano ~/.ssh/config
-
-**Other solution could be to solved that problem by using -K option for ssh-add:**
-
-ssh-add -K ~/.ssh/your_private_key
-
-But this way no longer works. Keys added to the keychain via ssh-add -K are not automatically re-added to the ssh-agent after a reboot.
-
 **SOLUTION**\
 Before you add the private key : 
 
@@ -104,6 +88,25 @@ Theses command will be added to **.bash_profile** file the command **ssh-add -A*
 The **.bash_profile** contains all the startup configuration and preferences for your command line interface. 
 
 https://unix.stackexchange.com/questions/140075/ssh-add-is-not-persistent-between-reboots/335720#335720?newreg=eab245b81e504751a3820ade565a0729
+
+Others solutions
+-
+
+A solution would be to force the key files to be kept permanently, by adding them in your ~/.ssh/config file:
+
+> IdentityFile ~/.ssh/gitHubKey\
+> IdentityFile ~/.ssh/id_rsa
+
+This file **config** should be in the ~/.ssh directory.
+you can use this command to modify it:
+
+> nano ~/.ssh/config
+
+**Other solution could be to solved that problem by using -K option for ssh-add:**
+
+ssh-add -K ~/.ssh/your_private_key
+
+But this way no longer works. Keys added to the keychain via ssh-add -K are not automatically re-added to the ssh-agent after a reboot.
 
 > In ~/.ssh create config file with the following content:
 
