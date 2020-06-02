@@ -31,8 +31,8 @@ Create the SSH key:
   An SSH key consists of a pair of files. One is the private key, which should never be shared with anyone. The other is the public key:
   
 1- Ensure you have a SSH key first. Or create one on the command line:\
-2- Open the Terminal\
-> 3- ssh-keygen -t rsa -C "your_email@example.com"
+2- Open the Terminal
+> ssh-keygen -t rsa -C "your_email@example.com"
 
 Your private key is saved to the **id_rsa** file in the **.ssh directory** and is used to verify the public key you use belongs to the same Bitbucket Server account.
 
@@ -45,12 +45,14 @@ You simply copy the public key, from the system for which you want to allow acce
 
 Copy the public key. One approach is to display the key on-screen using cat, and copy it from there:
 
+```
 1- Open the terminal
->2- cat < ~/.ssh/id_rsa.pub>  
+> cat < ~/.ssh/id_rsa.pub  
 3- Now, in Bitbucket Server, go to the Settings tab for the project or repository.
 Click Access keys and then Add key.
 4- Paste the key into the text box and click Add key.
 5- Now go back to your command line and follow the next steps:
+```
 
 Add the private key to that system. For Bitbucket in MacOs:
   -  
