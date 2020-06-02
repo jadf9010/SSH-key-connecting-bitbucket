@@ -78,7 +78,7 @@ Troubleshooting
   -
 **How to permanently add a private key with ssh-add on MacOS?**
 
-**SOLUTION**\
+**Solution**\
 Before you add the private key : 
 
 > ssh-add -K ~/.ssh/[your-private-key]
@@ -120,6 +120,26 @@ Host * (asterisk for all hosts or add specific host)
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile <key> (e.g. ~/.ssh/userKey)
+```
+SSH issues
+-
+If you're having problems with SSH, here are some things you can try when troubleshooting your issues.
+
+Test SSH authentication
+-
+Use the commands in this section to troubleshoot SSH authentication issues.
+https://confluence.atlassian.com/bitbucket/troubleshoot-ssh-issues-271943403.html
+
+This command checks your SSH agent for an SSH key, and then checks if that private key matches a public key for an existing Bitbucket account:
+
+```
+Git
+$ ssh -T git@bitbucket.org
+```
+If you don't have any keys loaded in the agent:
+```
+$ ssh -T hg@bitbucket.org
+Permission denied (publickey).
 ```
 
 https://stackoverflow.com/questions/3466626/how-to-permanently-add-a-private-key-with-ssh-add-on-ubuntu
