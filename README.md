@@ -98,7 +98,7 @@ You must run this command:
 
 > echo ssh-add -A | cat >> ~/.bash_profile
 
-Theses command will be added to **.bash_profile** file the command **ssh-add -A**
+Theses command will be added to **.bash_profile** file the command **ssh-add -A**\
 **ssh-add -A** : run manually to load your saved keychain.
 
 The **.bash_profile** contains all the startup configuration and preferences for your command line interface. 
