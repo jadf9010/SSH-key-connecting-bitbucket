@@ -49,6 +49,3 @@ Click Access keys and then Add key.
   
   
   
-  
-  
-  
