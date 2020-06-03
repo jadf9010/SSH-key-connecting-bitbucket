@@ -82,14 +82,17 @@ Troubleshooting
 **How to permanently add a private key with ssh-add on MacOS?**
 
 **Solution**\
-Before you add the private key : 
+After you add the private key : 
 
 > ssh-add -K ~/.ssh/[your-private-key]
 
 You must run this command:
 
 > echo ssh-add -A | cat >> ~/.bash_profile
-> ssh-add -K ~/.ssh/[your-private-Key]
+
+Or
+
+> echo ssh-add -K ~/.ssh/[your-private-Key] | cat >> ~/.bash_profile
 
 Theses command will be added to **.bash_profile** file the command you've added **ssh-add -A** or **ssh-add -K ~/.ssh/[your-private-Key]**
 > **ssh-add -A** : run manually to load your saved keychain.
