@@ -164,3 +164,7 @@ https://stackoverflow.com/questions/3466626/how-to-permanently-add-a-private-key
 https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
 
 https://github.com/jirsbek/SSH-keys-in-macOS-Sierra-keychain
+
+https://github.com/wwalker/ssh-find-agent
+http://blog.joncairns.com/2013/12/understanding-ssh-agent-and-ssh-add/
+https://gist.github.com/bsara/5c4d90db3016814a3d2fe38d314f9c23
