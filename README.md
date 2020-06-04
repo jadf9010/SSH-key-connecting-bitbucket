@@ -61,6 +61,18 @@ Add the private key to that system. For Bitbucket in MacOs:
 > ssh-add -K ~/.ssh/[your-private-key]  
 > ssh-add -K ~/.ssh/id_rsa
 
+## Configure SSH for Git Hosting Server
+
+Add the following text to `.ssh/config` (`.ssh` should be found
+in the root of your user home folder):
+
+```
+Host github.com
+ Hostname github.com
+ IdentityFile ~/.ssh/id_rsa
+```
+
+
 Configure SSH to always use the keychain
 -
 In the section Troubleshooting below It was solved
