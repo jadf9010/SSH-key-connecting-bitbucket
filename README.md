@@ -69,10 +69,12 @@ in the root of your user home folder):
 ```
 Host github.com
  Hostname github.com
- IdentityFile ~/.ssh/id_rsa
+ User userName
+ IdentityFile ~/.ssh/id_rsa 
+ UseKeychain yes
+ AddKeysToAgent yes
 ```
-
-
+  
 Configure SSH to always use the keychain
 -
 In the section Troubleshooting below It was solved
