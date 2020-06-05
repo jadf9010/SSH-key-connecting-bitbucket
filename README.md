@@ -20,16 +20,18 @@ Create the SSH key:
 2- Open the Terminal
 > ssh-keygen -t rsa -C "your_email@example.com"
 
-Your private key is saved to the **id_rsa** file in the **.ssh directory** and is used to verify the public key you use belongs to the same Bitbucket Server account.
+Your private key is saved to the **id_rsa** file in the **.ssh directory** (that should be found in the root of your user home folder) and is used to verify the public key you use belongs to the same Bitbucket Server account.
 
 Your public key is saved to the **id_rsa.pub;** file and is the key you upload to your Bitbucket Server account.
 
 
 If you want to see where the system keep the SSH keys (Public and Private)
 -
-- Open the terminal
+- Open the terminal:
+```
 - cd ~/.ssh
 - ls
+```
 
 **You'll see the SSH keys (Public and Private)**
 > config\
@@ -61,7 +63,7 @@ Add the private key to that system. For Bitbucket in MacOs:
 > ssh-add -K ~/.ssh/[your-private-key]  
 > ssh-add -K ~/.ssh/id_rsa
 
-**This command use the -K parameter that allow store the private key in the keychain in MAC**  
+**This command use the -K parameter that allow store the private key in the keychain in MAC** This is useful to avoid introduce the passphrase every time when we add the private key to the ssh-agent.  
 
 ## Configure SSH for Git Hosting Server
 
@@ -79,6 +81,22 @@ Host github.com
   
 Configure SSH to always use the keychain
 -
+After you add the private key : 
+
+> ssh-add -K ~/.ssh/[your-private-key]
+
+You must run this command:
+
+> echo ssh-add -A | cat >> ~/.bash_profile
+
+AND
+
+> echo ssh-add -K ~/.ssh/[your-private-Key] | cat >> ~/.bash_profile
+
+Theses command will be added to **.bash_profile** file the command you've added **ssh-add -A** and **ssh-add -K ~/.ssh/[your-private-Key]**
+> **ssh-add -A** : run manually to load your saved keychain.
+
+The **.bash_profile** contains all the startup configuration and preferences for your command line interface. 
 In the section Troubleshooting below It was solved
 
 DONE.
