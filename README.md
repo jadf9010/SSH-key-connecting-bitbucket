@@ -65,7 +65,7 @@ Add the private key to that system. For Bitbucket in MacOs:
 
 **This command use the -K parameter that allow store the private key in the keychain in MAC** This is useful to avoid introduce the passphrase every time when we add the private key to the ssh-agent.
 
-You should to make sure if the private Key was added to the **Keychain Access.app** in MACOS. Filter the search in the app for the word **shh** and your private keys should be there **if not repeat the before step**.
+You should to make sure if the private Key was added to the **Keychain Access.app** in MACOS. Filter the search in the app for the word **shh** and your private keys should be there **if you don't repeat the previous step.**
 
 ## Configure SSH for Git Hosting Server
 
@@ -83,11 +83,7 @@ Host github.com
   
 Configure SSH to always use the keychain
 -
-After you add the private key : 
-
-> ssh-add -K ~/.ssh/[your-private-key]
-
-You must run this command:
+You must execute this commands. This will automate the process of adding the private key each time you reboot the system:
 
 > echo ssh-add -A | cat >> ~/.bash_profile
 
